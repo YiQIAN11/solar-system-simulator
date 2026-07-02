@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cj3xmow3g70jd"]
+
+[ext_resource type="Script" uid="uid://rqva2427ptfk" path="res://src/camera.gd" id="1_u5kg4"]
+
+[node name="Camera" type="CharacterBody3D" unique_id=1235700269]
+script = ExtResource("1_u5kg4")
+speed = 20.0
+mouse_sensitivity = 0.01
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1894609475]
