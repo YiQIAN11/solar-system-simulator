@@ -22,11 +22,6 @@ Solar System Simulator is a 3D animation that simulates the motion, light, and f
 All code is licensed under the GNU GPL 3.0 License.
 
 ## Gallery
-
-### Video
-![Video of Solar System Simulator](previews/solar_system_simulator_video.mp4)
-
-### Screenshots
 ![First image of Solar System Simulator](previews/solar_system_simulator_image_first.png)
 ![Second image of Solar System Simulator](previews/solar_system_simulator_image_second.png)
 ![Third image of Solar System Simulator](previews/solar_system_simulator_image_third.png)
