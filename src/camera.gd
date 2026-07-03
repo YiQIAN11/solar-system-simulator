@@ -18,25 +18,33 @@ extends CharacterBody3D
 
 @export var speed: float
 @export var mouse_sensitivity: float
-@export var vertical_speed: float = 1.0   
+@export var vertical_speed: float = 1.0
+@export var is_active: bool = true
 
 @onready var camera: Camera3D = $Camera3D
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if is_active:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func set_active(active: bool):
+	is_active = active
+	camera.current = active
+	if active:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _input(event):
+	if not is_active:
+		return
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 
-	if event.is_action_pressed("ui_cancel"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 func _physics_process(_delta):
+	if not is_active:
+		return
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
