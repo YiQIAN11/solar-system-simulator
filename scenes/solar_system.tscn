@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://ddd86w88pne6e"]
 
-[ext_resource type="Script" uid="uid://b2ascaj2o3rc4" path="res://src/revolution.gd" id="1_hbvo3"]
-[ext_resource type="Texture2D" uid="uid://dknmxyrtflk10" path="res://textures/8k_sun.jpg" id="1_uqwdu"]
-[ext_resource type="PackedScene" uid="uid://cj3xmow3g70jd" path="res://camera.tscn" id="2_hp4wh"]
-[ext_resource type="Texture2D" uid="uid://bcdl8nnjjtsh8" path="res://textures/8k_mercury.jpg" id="3_yvcvu"]
-[ext_resource type="Texture2D" uid="uid://dqaeyveb8t5qm" path="res://textures/8k_earth_daymap.jpg" id="4_lkgeh"]
-[ext_resource type="Texture2D" uid="uid://dc20rhaa32a0w" path="res://textures/8k_venus_surface.jpg" id="4_nq8gk"]
-[ext_resource type="Texture2D" uid="uid://dvgepm2ric7q4" path="res://textures/8k_moon.jpg" id="6_yvcvu"]
-[ext_resource type="Texture2D" uid="uid://bdst7pagts2as" path="res://textures/8k_mars.jpg" id="7_j8ijc"]
-[ext_resource type="Texture2D" uid="uid://cef20fl1xbvwf" path="res://textures/2k_uranus.jpg" id="8_wc7ei"]
-[ext_resource type="Texture2D" uid="uid://bjpj7iwc2naop" path="res://textures/8k_jupiter.jpg" id="8_x1kvj"]
-[ext_resource type="Texture2D" uid="uid://df111ldibvxl3" path="res://textures/8k_saturn.jpg" id="9_ccfgl"]
-[ext_resource type="Texture2D" uid="uid://btoe0kf0x7bfe" path="res://textures/2k_neptune.jpg" id="9_uqwdu"]
-[ext_resource type="Texture2D" uid="uid://cy7tb70f7ejtp" path="res://textures/8k_stars_milky_way.jpg" id="13_yvcvu"]
+[ext_resource type="Texture2D" uid="uid://dknmxyrtflk10" path="res://textures/8k_sun.jpg" id="1_qytic"]
+[ext_resource type="Script" uid="uid://b2ascaj2o3rc4" path="res://src/revolution.gd" id="2_1lmcy"]
+[ext_resource type="Texture2D" uid="uid://bcdl8nnjjtsh8" path="res://textures/8k_mercury.jpg" id="3_o5t44"]
+[ext_resource type="Texture2D" uid="uid://dc20rhaa32a0w" path="res://textures/8k_venus_surface.jpg" id="4_rt42q"]
+[ext_resource type="Texture2D" uid="uid://dqaeyveb8t5qm" path="res://textures/8k_earth_daymap.jpg" id="5_82r0s"]
+[ext_resource type="Texture2D" uid="uid://dvgepm2ric7q4" path="res://textures/8k_moon.jpg" id="6_m6wcf"]
+[ext_resource type="Texture2D" uid="uid://bdst7pagts2as" path="res://textures/8k_mars.jpg" id="7_v8g1n"]
+[ext_resource type="Texture2D" uid="uid://bjpj7iwc2naop" path="res://textures/8k_jupiter.jpg" id="8_wnxik"]
+[ext_resource type="Texture2D" uid="uid://df111ldibvxl3" path="res://textures/8k_saturn.jpg" id="9_6v408"]
+[ext_resource type="Texture2D" uid="uid://cef20fl1xbvwf" path="res://textures/2k_uranus.jpg" id="10_q7mu2"]
+[ext_resource type="Texture2D" uid="uid://btoe0kf0x7bfe" path="res://textures/2k_neptune.jpg" id="11_ktiho"]
+[ext_resource type="PackedScene" uid="uid://cj3xmow3g70jd" path="res://scenes/camera.tscn" id="12_ip37g"]
+[ext_resource type="Texture2D" uid="uid://cy7tb70f7ejtp" path="res://textures/8k_stars_milky_way.jpg" id="13_a0mkk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkgeh"]
-albedo_texture = ExtResource("1_uqwdu")
+albedo_texture = ExtResource("1_qytic")
 emission_enabled = true
 emission_energy_multiplier = 2.0
-emission_texture = ExtResource("1_uqwdu")
+emission_texture = ExtResource("1_qytic")
 
 [sub_resource type="SphereMesh" id="SphereMesh_ae0vk"]
 material = SubResource("StandardMaterial3D_lkgeh")
@@ -51,7 +51,7 @@ scale_max = 0.29999998
 [sub_resource type="SphereMesh" id="SphereMesh_lkgeh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbvo3"]
-albedo_texture = ExtResource("3_yvcvu")
+albedo_texture = ExtResource("3_o5t44")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hbvo3"]
 material = SubResource("StandardMaterial3D_hbvo3")
@@ -59,7 +59,7 @@ radius = 0.6
 height = 1.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hp4wh"]
-albedo_texture = ExtResource("4_nq8gk")
+albedo_texture = ExtResource("4_rt42q")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hp4wh"]
 material = SubResource("StandardMaterial3D_hp4wh")
@@ -67,7 +67,7 @@ radius = 1.0
 height = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfb7d"]
-albedo_texture = ExtResource("4_lkgeh")
+albedo_texture = ExtResource("5_82r0s")
 
 [sub_resource type="SphereMesh" id="SphereMesh_tfb7d"]
 material = SubResource("StandardMaterial3D_tfb7d")
@@ -75,7 +75,7 @@ radius = 1.0
 height = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqwdu"]
-albedo_texture = ExtResource("6_yvcvu")
+albedo_texture = ExtResource("6_m6wcf")
 
 [sub_resource type="SphereMesh" id="SphereMesh_aypcb"]
 material = SubResource("StandardMaterial3D_uqwdu")
@@ -83,7 +83,7 @@ radius = 0.35
 height = 0.7
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auk15"]
-albedo_texture = ExtResource("7_j8ijc")
+albedo_texture = ExtResource("7_v8g1n")
 
 [sub_resource type="SphereMesh" id="SphereMesh_auk15"]
 material = SubResource("StandardMaterial3D_auk15")
@@ -91,7 +91,7 @@ radius = 0.8
 height = 1.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ms4l2"]
-albedo_texture = ExtResource("8_x1kvj")
+albedo_texture = ExtResource("8_wnxik")
 
 [sub_resource type="SphereMesh" id="SphereMesh_ms4l2"]
 material = SubResource("StandardMaterial3D_ms4l2")
@@ -99,7 +99,7 @@ radius = 2.8
 height = 5.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swmsm"]
-albedo_texture = ExtResource("9_ccfgl")
+albedo_texture = ExtResource("9_6v408")
 
 [sub_resource type="SphereMesh" id="SphereMesh_swmsm"]
 material = SubResource("StandardMaterial3D_swmsm")
@@ -119,7 +119,7 @@ outer_radius = 4.5
 ring_segments = 8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcwkm"]
-albedo_texture = ExtResource("8_wc7ei")
+albedo_texture = ExtResource("10_q7mu2")
 
 [sub_resource type="SphereMesh" id="SphereMesh_fcwkm"]
 material = SubResource("StandardMaterial3D_fcwkm")
@@ -127,7 +127,7 @@ radius = 1.8
 height = 3.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s371"]
-albedo_texture = ExtResource("9_uqwdu")
+albedo_texture = ExtResource("11_ktiho")
 
 [sub_resource type="SphereMesh" id="SphereMesh_3s371"]
 material = SubResource("StandardMaterial3D_3s371")
@@ -135,7 +135,7 @@ radius = 1.8
 height = 3.6
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nq8gk"]
-panorama = ExtResource("13_yvcvu")
+panorama = ExtResource("13_a0mkk")
 
 [sub_resource type="Sky" id="Sky_j8ijc"]
 sky_material = SubResource("PanoramaSkyMaterial_nq8gk")
@@ -150,7 +150,7 @@ sky = SubResource("Sky_j8ijc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sun" unique_id=799501273]
 mesh = SubResource("SphereMesh_ae0vk")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 20.0
 
 [node name="SunCorona" type="GPUParticles3D" parent="Sun/MeshInstance3D" unique_id=403132411]
@@ -170,42 +170,42 @@ omni_range = 100.0
 [node name="Mercury" type="Node3D" parent="Planets" unique_id=1081265041]
 
 [node name="Pivot" type="Node3D" parent="Planets/Mercury" unique_id=676251019]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 40.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Mercury/Pivot" unique_id=652442334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
 mesh = SubResource("SphereMesh_hbvo3")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 10.0
 
 [node name="Venus" type="Node3D" parent="Planets" unique_id=221741601]
 
 [node name="Pivot" type="Node3D" parent="Planets/Venus" unique_id=33569731]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 25.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Venus/Pivot" unique_id=723801971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
 mesh = SubResource("SphereMesh_hp4wh")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 16.0
 
 [node name="Earth" type="Node3D" parent="Planets" unique_id=1130632895]
 
 [node name="Pivot" type="Node3D" parent="Planets/Earth" unique_id=1697637700]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 18.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Earth/Pivot" unique_id=893706936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
 mesh = SubResource("SphereMesh_tfb7d")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 60.0
 
 [node name="Moon" type="Node3D" parent="Planets/Earth/Pivot" unique_id=69462259]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 90.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Earth/Pivot/Moon" unique_id=1247960589]
@@ -215,37 +215,37 @@ mesh = SubResource("SphereMesh_aypcb")
 [node name="Mars" type="Node3D" parent="Planets" unique_id=2042025653]
 
 [node name="Pivot" type="Node3D" parent="Planets/Mars" unique_id=1776448557]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 14.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Mars/Pivot" unique_id=8835450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
 mesh = SubResource("SphereMesh_auk15")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 50.0
 
 [node name="Jupiter" type="Node3D" parent="Planets" unique_id=1193928173]
 
 [node name="Pivot" type="Node3D" parent="Planets/Jupiter" unique_id=442006411]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 8.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Jupiter/Pivot" unique_id=1591638820]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
 mesh = SubResource("SphereMesh_ms4l2")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 80.0
 
 [node name="Saturn" type="Node3D" parent="Planets" unique_id=532603737]
 
 [node name="Pivot" type="Node3D" parent="Planets/Saturn" unique_id=949891472]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 6.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Saturn/Pivot" unique_id=2064222679]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 0)
 mesh = SubResource("SphereMesh_swmsm")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 70.0
 
 [node name="Ring" type="Node3D" parent="Planets/Saturn/Pivot" unique_id=2016857700]
@@ -258,28 +258,28 @@ mesh = SubResource("TorusMesh_nq8gk")
 [node name="Uranus" type="Node3D" parent="Planets" unique_id=1432428262]
 
 [node name="Pivot" type="Node3D" parent="Planets/Uranus" unique_id=1419966059]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 4.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Uranus/Pivot" unique_id=1504542377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 0)
 mesh = SubResource("SphereMesh_fcwkm")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = -40.0
 
 [node name="Neptune" type="Node3D" parent="Planets" unique_id=766903639]
 
 [node name="Pivot" type="Node3D" parent="Planets/Neptune" unique_id=974483737]
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 3.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planets/Neptune/Pivot" unique_id=1199953787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 0)
 mesh = SubResource("SphereMesh_3s371")
-script = ExtResource("1_hbvo3")
+script = ExtResource("2_1lmcy")
 revolution_speed = 36.0
 
-[node name="Camera" parent="." unique_id=143329310 instance=ExtResource("2_hp4wh")]
+[node name="Camera" parent="." unique_id=143329310 instance=ExtResource("12_ip37g")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756374093]
 environment = SubResource("Environment_x1kvj")
