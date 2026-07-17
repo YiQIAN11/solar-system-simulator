@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://btoe0kf0x7bfe" path="res://textures/2k_neptune.jpg" id="11_ktiho"]
 [ext_resource type="PackedScene" uid="uid://cj3xmow3g70jd" path="res://scenes/camera.tscn" id="12_ip37g"]
 [ext_resource type="Texture2D" uid="uid://cy7tb70f7ejtp" path="res://textures/8k_stars_milky_way.jpg" id="13_a0mkk"]
-[ext_resource type="Script" path="res://src/camera_switcher.gd" id="14_swch"]
+[ext_resource type="Script" uid="uid://1kefionmv0a" path="res://src/camera_switcher.gd" id="14_swch"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkgeh"]
 albedo_texture = ExtResource("1_qytic")
@@ -312,12 +312,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756374093]
 environment = SubResource("Environment_x1kvj")
 
-[node name="CameraSwitcher" type="CanvasLayer" parent="."]
+[node name="CameraSwitcher" type="CanvasLayer" parent="." unique_id=2017419280]
 script = ExtResource("14_swch")
 camera_paths = Array[NodePath]([NodePath("../Camera"), NodePath("../Planets/Mercury/Pivot/Camera"), NodePath("../Planets/Venus/Pivot/Camera"), NodePath("../Planets/Earth/Pivot/Camera"), NodePath("../Planets/Earth/Pivot/Moon/Camera"), NodePath("../Planets/Mars/Pivot/Camera"), NodePath("../Planets/Jupiter/Pivot/Camera"), NodePath("../Planets/Saturn/Pivot/Camera"), NodePath("../Planets/Uranus/Pivot/Camera"), NodePath("../Planets/Neptune/Pivot/Camera")])
 camera_labels = Array[String](["Free Camera", "Mercury", "Venus", "Earth", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"])
 
-[node name="Control" type="Control" parent="CameraSwitcher"]
+[node name="Control" type="Control" parent="CameraSwitcher" unique_id=501738226]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -326,7 +326,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Panel" type="Panel" parent="CameraSwitcher/Control"]
+[node name="Panel" type="Panel" parent="CameraSwitcher/Control" unique_id=1370714666]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -339,9 +339,8 @@ offset_right = 150.0
 offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CameraSwitcher/Control/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CameraSwitcher/Control/Panel" unique_id=1497370828]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -350,7 +349,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 4
 
-[node name="TitleLabel" type="Label" parent="CameraSwitcher/Control/Panel/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="CameraSwitcher/Control/Panel/VBoxContainer" unique_id=1291006047]
 layout_mode = 2
 text = "Select Camera"
 horizontal_alignment = 1
