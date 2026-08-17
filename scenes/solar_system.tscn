@@ -83,6 +83,10 @@ material = SubResource("StandardMaterial3D_uqwdu")
 radius = 0.35
 height = 0.7
 
+[sub_resource type="TorusMesh" id="TorusMesh_q7mu2"]
+inner_radius = 2.395
+outer_radius = 2.405
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auk15"]
 albedo_texture = ExtResource("7_v8g1n")
 
@@ -144,6 +148,38 @@ sky_material = SubResource("PanoramaSkyMaterial_nq8gk")
 [sub_resource type="Environment" id="Environment_x1kvj"]
 background_mode = 2
 sky = SubResource("Sky_j8ijc")
+
+[sub_resource type="TorusMesh" id="TorusMesh_1lmcy"]
+inner_radius = 12.0
+outer_radius = 12.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_o5t44"]
+inner_radius = 18.0
+outer_radius = 18.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_rt42q"]
+inner_radius = 24.0
+outer_radius = 24.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_82r0s"]
+inner_radius = 30.0
+outer_radius = 30.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_m6wcf"]
+inner_radius = 40.0
+outer_radius = 40.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_v8g1n"]
+inner_radius = 52.0
+outer_radius = 52.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_wnxik"]
+inner_radius = 64.0
+outer_radius = 64.01
+
+[sub_resource type="TorusMesh" id="TorusMesh_6v408"]
+inner_radius = 76.0
+outer_radius = 76.01
 
 [node name="SolarSystem" type="Node3D" unique_id=781694257]
 
@@ -224,6 +260,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.395, 0, 0)
 
 [node name="Camera" parent="Planets/Earth/Pivot" unique_id=1258754462 instance=ExtResource("12_ip37g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="MoonOrbit" type="MeshInstance3D" parent="Planets/Earth/Pivot" unique_id=1630259242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+mesh = SubResource("TorusMesh_q7mu2")
 
 [node name="Mars" type="Node3D" parent="Planets" unique_id=2042025653]
 
@@ -353,3 +393,27 @@ theme_override_constants/separation = 4
 layout_mode = 2
 text = "Select Camera"
 horizontal_alignment = 1
+
+[node name="MercuryOrbit" type="MeshInstance3D" parent="." unique_id=1653892917]
+mesh = SubResource("TorusMesh_1lmcy")
+
+[node name="VenusOrbit" type="MeshInstance3D" parent="." unique_id=1013608808]
+mesh = SubResource("TorusMesh_o5t44")
+
+[node name="EarthOrbit" type="MeshInstance3D" parent="." unique_id=1075317744]
+mesh = SubResource("TorusMesh_rt42q")
+
+[node name="MarsOrbit" type="MeshInstance3D" parent="." unique_id=285459262]
+mesh = SubResource("TorusMesh_82r0s")
+
+[node name="JupiterOrbit" type="MeshInstance3D" parent="." unique_id=184966437]
+mesh = SubResource("TorusMesh_m6wcf")
+
+[node name="SaturnOrbit" type="MeshInstance3D" parent="." unique_id=47040407]
+mesh = SubResource("TorusMesh_v8g1n")
+
+[node name="UranusOrbit" type="MeshInstance3D" parent="." unique_id=360412105]
+mesh = SubResource("TorusMesh_wnxik")
+
+[node name="NeptuneOrbit" type="MeshInstance3D" parent="." unique_id=1908602401]
+mesh = SubResource("TorusMesh_6v408")
