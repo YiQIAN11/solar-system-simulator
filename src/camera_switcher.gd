@@ -18,13 +18,16 @@ extends CanvasLayer
 
 @export var camera_paths: Array[NodePath] = []
 @export var camera_labels: Array[String] = []
+@export var orbit_paths: Array[NodePath] = []
+@export var orbit_labels: Array[String] = []
 
 var cameras: Array[CharacterBody3D] = []
+var orbit_nodes: Array[MeshInstance3D] = []
 var active_camera_index: int = 0
 var menu_visible: bool = false
 
 @onready var menu_panel: Panel = $Control/Panel
-@onready var vbox: VBoxContainer = $Control/Panel/VBoxContainer
+@onready var vbox: VBoxContainer = $Control/Panel/ScrollContainer/VBoxContainer
 
 func _ready():
 	# Resolve NodePaths to actual camera nodes
@@ -32,6 +35,12 @@ func _ready():
 		var cam = get_node(path)
 		if cam is CharacterBody3D:
 			cameras.append(cam)
+
+	# Resolve NodePaths to orbit ring meshes
+	for path in orbit_paths:
+		var orbit = get_node(path)
+		if orbit is MeshInstance3D:
+			orbit_nodes.append(orbit)
 
 	if cameras.is_empty():
 		return
@@ -47,6 +56,8 @@ func _ready():
 		btn.text = camera_labels[i]
 		btn.pressed.connect(_on_camera_button_pressed.bind(i))
 		vbox.add_child(btn)
+
+	_build_orbit_checkboxes()
 
 	menu_panel.hide()
 
@@ -82,3 +93,25 @@ func _on_camera_button_pressed(index: int):
 	# Close menu and capture mouse
 	menu_visible = false
 	menu_panel.hide()
+
+func _build_orbit_checkboxes():
+	if orbit_nodes.is_empty():
+		return
+
+	vbox.add_child(HSeparator.new())
+
+	var title = Label.new()
+	title.text = "Orbit Paths"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(title)
+
+	for i in range(orbit_nodes.size()):
+		var checkbox = CheckBox.new()
+		checkbox.text = orbit_labels[i] if i < orbit_labels.size() else orbit_nodes[i].name
+		checkbox.button_pressed = orbit_nodes[i].visible
+		checkbox.toggled.connect(_on_orbit_toggled.bind(i))
+		vbox.add_child(checkbox)
+
+func _on_orbit_toggled(pressed: bool, index: int):
+	if index >= 0 and index < orbit_nodes.size():
+		orbit_nodes[index].visible = pressed
