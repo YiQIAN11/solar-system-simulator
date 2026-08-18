@@ -1,10 +1,13 @@
 # Solar System Simulator
 
-Solar System Simulator is a 3D animation that simulates the motion, light, and fire effects in the solar system using Godot Engine 4.6. Users can explore freely with the keyboard and mouse.
+Solar System Simulator is a 3D animation that simulates the motion, light, and corona effects of the solar system, built with Godot Engine 4.6. Users can explore freely with the keyboard and mouse.
 
 ## Features
 - Particle system for the solar corona
 - UHD textures for the planets
+- Switchable cameras following the planets and the Moon
+- Toggleable orbit paths
+- Saturn's rings and a Milky Way sky
 - Keyboard controls
 - Mouse-controlled view rotation
 
@@ -15,8 +18,10 @@ Solar System Simulator is a 3D animation that simulates the motion, light, and f
 
 ## Keyboard controls
 - WASD, arrow keys: move
+- Mouse: rotate the view
 - Space, Enter: move upwards
 - Shift: move downwards
+- Esc: open/close the camera menu
 
 ## Licenses
 All code is licensed under the GNU GPL 3.0 License.
